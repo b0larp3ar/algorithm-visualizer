@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>Algorithm Visualizer</h1>
+    </div>
+
+    <!--main container-->
+    <div class="main-container">
+        <!--Control section-->
+        <div class="controls">
+            <button id="generate">Generate New Array</button><br><br><br>
+            <select id="algorithm">
+                <option>none</option>
+                <option value="bubble">Bubble sort</option>
+                <option value="selection">Selection sort</option>
+                <option value="insertion">Insertion sort</option>
+            </select><br><br><br>
+            <button id="start">Start Sorting</button><br><br><br>
+            <label>
+                Speed:
+                <input type="range" id="speed" min="10" max="500" value="100">
+            </label>
+        </div>
+
+        <!--Bars-->
+        <div id="array-container"></div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
