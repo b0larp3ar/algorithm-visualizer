@@ -1,3 +1,19 @@
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .controls-panel {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #333;
+    }
+
+    #array-container {
+        height: 50vh;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
