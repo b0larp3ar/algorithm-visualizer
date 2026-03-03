@@ -82,6 +82,7 @@ body {
     padding: 8px;
     border-radius: 6px;
     cursor: pointer;
+    text-align: center;
 }
 
 .controls input[type="range"] {
