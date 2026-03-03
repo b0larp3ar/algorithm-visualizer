@@ -7,10 +7,22 @@
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #333;
+        padding: 15px;
+    }
+
+    .controls-panel button,
+    .controls-panel select,
+    .controls-panel input {
+        width: 100%;
     }
 
     #array-container {
         height: 50vh;
+        padding: 15px;
+    }
+
+    .bar {
+        margin: 0 1px;
     }
 }
 
