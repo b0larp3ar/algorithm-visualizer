@@ -1,9 +1,9 @@
 @media (max-width: 1000px) {
-    .content {
+    .main-container {
         flex-direction: column;
     }
 
-    .controls-panel {
+    .controls {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #333;
