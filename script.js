@@ -45,12 +45,13 @@ function enableControls() {
 //array to bars
 function renderArray(arr) {
     const barWidth = Math.max(800 / arr.length, 2);
-    bar.style.width = `${barWidth}px`;
+    
     container.innerHTML = "";
     arr.forEach(value => {
         const bar = document.createElement("div");
         bar.classList.add("bar");
         bar.style.height = `${value}px`;
+        bar.style.width = `${barWidth}px`;
         container.appendChild(bar);
     });
 }
