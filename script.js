@@ -11,6 +11,7 @@ const generateBtn = document.getElementById("generate");
 const algorithmSelect = document.getElementById("algorithm");
 const startBtn = document.getElementById("start");
 const speedSlider = document.getElementById("speed");
+const sizeSlider = document.getElementById("size");
 let delay = 100;
 let isSorting = false;
 let array = [];
@@ -20,20 +21,31 @@ speedSlider.addEventListener("input", () => {
     delay = 510-speedSlider.value;
 });
 
+//array size input
+sizeSlider.addEventListener("input", () => {
+    if (isSorting) return;
+
+    init(sizeSlider.value);
+});
+
 //disable-enable controls
 function disableControls() {
     generateBtn.disabled = true;
     startBtn.disabled = true;
     speedSlider.disabled = true;
+    sizeSlider.disabled = true;
 }
 function enableControls() {
     generateBtn.disabled = false;
     startBtn.disabled = false;
     speedSlider.disabled = false;
+    sizeSlider.disabled = false;
 }
 
 //array to bars
 function renderArray(arr) {
+    const barWidth = Math.max(800 / arr.length, 2);
+    bar.style.width = `${barWidth}px`;
     container.innerHTML = "";
     arr.forEach(value => {
         const bar = document.createElement("div");
@@ -43,7 +55,7 @@ function renderArray(arr) {
     });
 }
 
-function init() {
+function init(size = sizeSlider.value) {
     array = generateArray();
     renderArray(array);
 }
