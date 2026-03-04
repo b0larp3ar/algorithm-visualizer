@@ -7,9 +7,11 @@ An interactive web-based visualizer for sorting algorithms.
 - Selection Sort
 - Insertion Sort
 - Merge Sort
+- Quick Sort
 
 ## Features
-- Adjustable Speed
+- Adjustable speed
+- Adjustable array size
 - Clean UI with control panel
 
 ## Live Demo
