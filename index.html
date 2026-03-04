@@ -18,7 +18,7 @@
         <div class="controls">
             <button id="generate">Generate New Array</button><br><br><br>
             <select id="algorithm">
-                <option>none</option>
+                <option value="none">none</option>
                 <option value="bubble">Bubble sort</option>
                 <option value="selection">Selection sort</option>
                 <option value="insertion">Insertion sort</option>
@@ -36,6 +36,25 @@
 
         <!--Bars-->
         <div id="array-container"></div>
+
+        <!--Time complexity + explanation-->
+        <div class="controls">
+            <!--Time complexity-->
+            <div class="time-complexity">
+                <h3>Time Complexity</h3>
+                <p>Best: <span id="best-case">-</span></p>
+                <p>Average: <span id="avg-case">-</span></p>
+                <p>Worst: <span id="worst-case">-</span></p>
+            </div>
+
+            <!--Explanation panel-->
+            <div class="explanation">
+                <h3>Algorithm Explanation</h3>
+                <p id="algo-explanation">
+                    Select an algorithm to see how it works.
+                </p>
+            </div>
+        </div>
     </div>
 
     <script type="module" src="script.js"></script>

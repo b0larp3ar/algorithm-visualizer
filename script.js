@@ -15,6 +15,55 @@ const sizeSlider = document.getElementById("size");
 let delay = 100;
 let isSorting = false;
 let array = [];
+const complexity = {
+    none: {
+        best: "-",
+        average: "-",
+        worst: "-"
+    },
+    bubble: {
+        best: "O(n)",
+        average: "O(n²)",
+        worst: "O(n²)"
+    },
+    selection: {
+        best: "O(n²)",
+        average: "O(n²)",
+        worst: "O(n²)"
+    },
+    insertion: {
+        best: "O(n)",
+        average: "O(n²)",
+        worst: "O(n²)"
+    },
+    merge: {
+        best: "O(n log n)",
+        average: "O(n log n)",
+        worst: "O(n log n)"
+    },
+    quick: {
+        best: "O(n log n)",
+        average: "O(n log n)",
+        worst: "O(n²)"
+    }
+};
+const explanations = {
+    none: "Select an algorithm to see how it works.",
+
+    bubble: "Bubble Sort repeatedly compares adjacent elements and swaps them if they are in the wrong order. Larger elements gradually 'bubble' to the end of the array.",
+
+    selection: "Selection Sort repeatedly selects the smallest element from the unsorted portion of the array and places it at the beginning.",
+
+    insertion: "Insertion Sort builds the sorted array one element at a time by inserting each element into its correct position.",
+
+    merge: "Merge Sort divides the array into halves recursively, sorts each half, and then merges the sorted halves together.",
+
+    quick: "Quick Sort selects a pivot element and partitions the array so that elements smaller than the pivot go to the left and larger elements go to the right."
+};
+const bestCase = document.getElementById("best-case");
+const avgCase = document.getElementById("avg-case");
+const worstCase = document.getElementById("worst-case");
+const explanationText = document.getElementById("algo-explanation");
 
 //speed input
 speedSlider.addEventListener("input", () => {
@@ -26,6 +75,11 @@ sizeSlider.addEventListener("input", () => {
     if (isSorting) return;
 
     init(sizeSlider.value);
+});
+
+algorithmSelect.addEventListener("change", () => {
+    updateComplexity(algorithmSelect.value);
+    updateExplanation(algorithmSelect.value);
 });
 
 //disable-enable controls
@@ -56,12 +110,28 @@ function renderArray(arr) {
     });
 }
 
+//update time complexity
+function updateComplexity(algo) {
+    bestCase.textContent = complexity[algo].best;
+    avgCase.textContent = complexity[algo].average;
+    worstCase.textContent = complexity[algo].worst;
+}
+
+//update explanation
+function updateExplanation(algo) {
+    explanationText.textContent = explanations[algo];
+}
+
 function init(size = sizeSlider.value) {
     array = generateArray(size);
     renderArray(array);
+    updateComplexity(algorithmSelect.value);
+    updateExplanation(algorithmSelect.value);
 }
 
-generateBtn.addEventListener("click", init);
+generateBtn.addEventListener("click", () => {
+    init(sizeSlider.value);
+});
 
 startBtn.addEventListener("click", async () => {
     if (isSorting) return;

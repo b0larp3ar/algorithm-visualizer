@@ -50,9 +50,9 @@ body {
     /*margin: 20px;*/
     flex-direction: column;
     /*width: 250px;
-    background: #1e1e1e;*/
+    background: #1e1e1e;
     border-right: 1px solid #333;
-    /*border: 1px solid #444;
+    border: 1px solid #444;
     border-radius: 20px;*/
     padding: 25px;
     gap: 20px;
@@ -68,6 +68,25 @@ body {
     padding: 50px;
     border: 1px solid #444;
     border-radius: 20px;
+}
+
+.time-complexity {
+    width: 200px;
+    /*margin-top: 20px;*/
+    padding: 30px;
+    background: #453f4e;
+    border-radius: 6px;
+    max-height: 200px;
+}
+
+.explanation {
+    width: 200px;
+    padding: 30px;
+    /*margin-top: 20px;*/
+    background: #453f4e;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .bar {
