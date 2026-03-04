@@ -12,6 +12,7 @@ An interactive web-based visualizer for sorting algorithms.
 ## Features
 - Adjustable speed
 - Adjustable array size
+- Time complexity and explanation panel
 - Clean UI with control panel
 
 ## Live Demo
