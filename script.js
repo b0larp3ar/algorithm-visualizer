@@ -56,7 +56,7 @@ function renderArray(arr) {
 }
 
 function init(size = sizeSlider.value) {
-    array = generateArray();
+    array = generateArray(size);
     renderArray(array);
 }
 
