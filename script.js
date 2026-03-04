@@ -3,6 +3,7 @@ import { bubbleSort } from "./algorithms/bubbleSort.js";
 import { selectionSort } from "./algorithms/selectionSort.js";
 import { insertionSort } from "./algorithms/insertionSort.js";
 import { mergeSort } from "./algorithms/mergeSort.js";
+import { quickSort } from "./algorithms/quickSort.js";
 
 //variables
 const container = document.getElementById("array-container");
@@ -69,6 +70,9 @@ startBtn.addEventListener("click", async () => {
             break;
         case "merge":
             await mergeSort(array, delay);
+            break;
+        case "quick":
+            await quickSort(array, delay);
             break;
     }
     enableControls();

@@ -6,6 +6,7 @@ An interactive web-based visualizer for sorting algorithms.
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
+- Merge Sort
 
 ## Features
 - Adjustable Speed
