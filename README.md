@@ -9,7 +9,6 @@ An interactive web-based visualizer for sorting algorithms.
 
 ## Features
 - Adjustable Speed
-- Adjustable Array Size
 - Clean UI with control panel
 
 ## Live Demo
